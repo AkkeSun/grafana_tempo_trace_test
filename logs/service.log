@@ -1,0 +1,144 @@
+2024-04-17 15:04:36  INFO [app=myApplication, traceId=,spanId=] - Starting TraceTestApplication using Java 17.0.9 on ods-MacBook-Pro.local with PID 19798 (/Users/od/IdeaProjects/TraceTest/build/classes/java/main started by od in /Users/od/IdeaProjects/TraceTest)
+2024-04-17 15:04:36  INFO [app=myApplication, traceId=,spanId=] - No active profile set, falling back to 1 default profile: "default"
+2024-04-17 15:04:36  INFO [app=myApplication, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration' of type [io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration$$EnhancerBySpringCGLIB$$73995b6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:04:36  WARN [app=myApplication, traceId=,spanId=] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$example$jenkinstest$aop$Traced
+2024-04-17 15:04:36  INFO [app=myApplication, traceId=,spanId=] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-04-17 15:04:36 ERROR [app=myApplication, traceId=,spanId=] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$example$jenkinstest$aop$Traced
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:765)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.sweettracker.tracetest.TraceTestApplication.main(TraceTestApplication.java:10)
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: com$example$jenkinstest$aop$Traced
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:341)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:293)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 24 common frames omitted
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Starting TraceTestApplication using Java 17.0.9 on ods-MacBook-Pro.local with PID 19808 (/Users/od/IdeaProjects/TraceTest/build/classes/java/main started by od in /Users/od/IdeaProjects/TraceTest)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - No active profile set, falling back to 1 default profile: "default"
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration' of type [io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration$$EnhancerBySpringCGLIB$$ce9915f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$df6023e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'opentracing.jaeger-io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'metricsFactory' of type [io.jaegertracing.internal.metrics.NoopMetricsFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'metrics' of type [io.jaegertracing.internal.metrics.Metrics] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'sampler' of type [io.jaegertracing.internal.samplers.ConstSampler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'reporter' of type [io.jaegertracing.internal.reporters.CompositeReporter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'tracer' of type [io.jaegertracing.internal.JaegerTracer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators' of type [io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators$$EnhancerBySpringCGLIB$$f2e68567] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:03  INFO [app=myApplication, traceId=,spanId=] - Bean 'standardTagsWebClientSpanDecorator' of type [io.opentracing.contrib.spring.web.client.WebClientSpanDecorator$StandardTags] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Tomcat initialized with port(s): 8080 (http)
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Starting service [Tomcat]
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Initializing Spring embedded WebApplicationContext
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Root WebApplicationContext: initialization completed in 872 ms
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(prometheus|prometheus/.*)"
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-17 15:05:04  INFO [app=myApplication, traceId=,spanId=] - Started TraceTestApplication in 1.833 seconds (JVM running for 2.116)
+2024-04-17 15:05:05  INFO [app=myApplication, traceId=,spanId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-17 15:05:05  INFO [app=myApplication, traceId=,spanId=] - Initializing Servlet 'dispatcherServlet'
+2024-04-17 15:05:05  INFO [app=myApplication, traceId=,spanId=] - Completed initialization in 0 ms
+2024-04-17 15:05:09  INFO [app=myApplication, traceId=74ab69428ea46783,spanId=74ab69428ea46783] - [test api] call
+2024-04-17 15:05:09  INFO [app=myApplication, traceId=74ab69428ea46783,spanId=266c3a43422469e7] - [getTestData] call
+2024-04-17 15:05:09  INFO [app=myApplication, traceId=74ab69428ea46783,spanId=2548415f38341a52] - [getApiResponse] call
+2024-04-17 15:05:09 ERROR [app=myApplication, traceId=74ab69428ea46783,spanId=2548415f38341a52] - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-04-17 15:05:45  INFO [app=traceTest, traceId=,spanId=] - Starting TraceTestApplication using Java 17.0.9 on ods-MacBook-Pro.local with PID 19829 (/Users/od/IdeaProjects/TraceTest/build/classes/java/main started by od in /Users/od/IdeaProjects/TraceTest)
+2024-04-17 15:05:45  INFO [app=traceTest, traceId=,spanId=] - No active profile set, falling back to 1 default profile: "default"
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration' of type [io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration$$EnhancerBySpringCGLIB$$221078ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$32d7869a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'opentracing.jaeger-io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'metricsFactory' of type [io.jaegertracing.internal.metrics.NoopMetricsFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'metrics' of type [io.jaegertracing.internal.metrics.Metrics] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'sampler' of type [io.jaegertracing.internal.samplers.ConstSampler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'reporter' of type [io.jaegertracing.internal.reporters.CompositeReporter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'tracer' of type [io.jaegertracing.internal.JaegerTracer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators' of type [io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators$$EnhancerBySpringCGLIB$$465de81f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Bean 'standardTagsWebClientSpanDecorator' of type [io.opentracing.contrib.spring.web.client.WebClientSpanDecorator$StandardTags] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Tomcat initialized with port(s): 8080 (http)
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Starting service [Tomcat]
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Initializing Spring embedded WebApplicationContext
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Root WebApplicationContext: initialization completed in 805 ms
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(prometheus|prometheus/.*)"
+2024-04-17 15:05:46  INFO [app=traceTest, traceId=,spanId=] - Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Started TraceTestApplication in 1.76 seconds (JVM running for 1.993)
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Initializing Servlet 'dispatcherServlet'
+2024-04-17 15:05:47  INFO [app=traceTest, traceId=,spanId=] - Completed initialization in 1 ms
+2024-04-17 15:05:49  INFO [app=traceTest, traceId=5d8625238fc84305,spanId=5d8625238fc84305] - [test api] call
+2024-04-17 15:05:49  INFO [app=traceTest, traceId=5d8625238fc84305,spanId=7343c2b3002adfa0] - [getTestData] call
+2024-04-17 15:05:49  INFO [app=traceTest, traceId=5d8625238fc84305,spanId=c7f4e8947f5cb617] - [getApiResponse] call
+2024-04-17 15:05:49 ERROR [app=traceTest, traceId=5d8625238fc84305,spanId=c7f4e8947f5cb617] - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Starting TraceTestApplication using Java 17.0.9 on ods-MacBook-Pro.local with PID 19885 (/Users/od/IdeaProjects/TraceTest/build/classes/java/main started by od in /Users/od/IdeaProjects/TraceTest)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - No active profile set, falling back to 1 default profile: "default"
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration' of type [io.opentracing.contrib.spring.cloud.async.DefaultAsyncAutoConfiguration$$EnhancerBySpringCGLIB$$221078ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$32d7869a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'opentracing.jaeger-io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties' of type [io.opentracing.contrib.java.spring.jaeger.starter.JaegerConfigurationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'metricsFactory' of type [io.jaegertracing.internal.metrics.NoopMetricsFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'metrics' of type [io.jaegertracing.internal.metrics.Metrics] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'sampler' of type [io.jaegertracing.internal.samplers.ConstSampler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'reporter' of type [io.jaegertracing.internal.reporters.CompositeReporter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'tracer' of type [io.jaegertracing.internal.JaegerTracer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators' of type [io.opentracing.contrib.spring.web.starter.WebClientTracingAutoConfiguration$DefaultWebClientSpanDecorators$$EnhancerBySpringCGLIB$$465de81f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Bean 'standardTagsWebClientSpanDecorator' of type [io.opentracing.contrib.spring.web.client.WebClientSpanDecorator$StandardTags] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Tomcat initialized with port(s): 8080 (http)
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Starting service [Tomcat]
+2024-04-17 15:08:59  INFO [app=traceTest, traceId=,spanId=] - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Initializing Spring embedded WebApplicationContext
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Root WebApplicationContext: initialization completed in 776 ms
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(prometheus|prometheus/.*)"
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-17 15:09:00  INFO [app=traceTest, traceId=,spanId=] - Started TraceTestApplication in 1.631 seconds (JVM running for 1.859)
+2024-04-17 15:09:01  INFO [app=traceTest, traceId=,spanId=] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-17 15:09:01  INFO [app=traceTest, traceId=,spanId=] - Initializing Servlet 'dispatcherServlet'
+2024-04-17 15:09:01  INFO [app=traceTest, traceId=,spanId=] - Completed initialization in 1 ms
+2024-04-17 15:09:08  INFO [app=traceTest, traceId=e8ef5215766c713,spanId=e8ef5215766c713] - [test api] call
+2024-04-17 15:09:08  INFO [app=traceTest, traceId=e8ef5215766c713,spanId=6395223acb9717b9] - [getTestData] call
+2024-04-17 15:09:08  INFO [app=traceTest, traceId=e8ef5215766c713,spanId=961349c41e56fccc] - [getApiResponse] call
+2024-04-17 15:09:08 ERROR [app=traceTest, traceId=e8ef5215766c713,spanId=961349c41e56fccc] - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
